@@ -1,0 +1,22 @@
+
+.btn-df-nc-primary, .btn-df-nc-secondary{
+    padding: 16px 32px;
+    border-radius: 12px;   
+}
+.btn-sm-nc-primary, .btn-sm-nc-secondary{
+    padding: 12px 16px;
+    border-radius: 12px !important;   
+}
+
+.btn-df-nc-secondary .btn-sm-nc-secondary{
+    border: 1px solid $primary;
+}
+
+.btn-df-nc-primary, .btn-sm-nc-primary{
+    color: $white;
+    background-color: $primary;
+    &:hover{
+        background-color: $brown-120;
+        color: $white;
+    }
+}

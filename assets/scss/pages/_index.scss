@@ -1,3 +1,51 @@
-.index-title {
-  font-size: 100px;
+
+.background-img-1{
+  background-image: url(/assets/images/index/hero-bg.png);
+  background-size: cover;        /* 填滿容器，維持比例 */
+  background-position: right -9rem center;   /* 中心點對齊 */
+  background-repeat: no-repeat;  /* 不重複 */  
+  @media (min-width: 700px){
+    background-position: center;
+  }  
+}
+.background-color-1{
+  background-color: #221F1E;
+}
+.banner-gradient-overlay{
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(34, 31, 30, 0) 0%,    /* 上方透明 */
+    rgba(34, 31, 30, 0.3) 30%, /* 中間 30% 深色 */
+    rgba(34, 31, 30, 1) 100%   /* 下方全黑 */
+  );  
+  @media (min-width: 992px){
+    height: 360px;
+  }
+}
+.tess{
+  padding-top: 112px !important;
+}
+.searchbar{
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e7ebf0;
+  padding-right: .25rem;      /* 讓右側按鈕不貼邊 */
+    @media (min-width: 992px){
+    width: 720px;
+  }
+}
+
+/* 讓 input 取得焦點時不要出現藍邊框影 */
+.searchbar .form-control:focus{
+  box-shadow: none;
+}
+
+@media (min-width:992px){
+  .banner-lg-position{
+    padding-top: 212px !important;
+    padding-left: 110px;
+    padding-bottom: 114px;
+  }
 }

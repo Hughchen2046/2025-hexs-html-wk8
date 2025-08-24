@@ -1,4 +1,53 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+html {
+  // 設定頁面可滾動，並為滾動條定義時間軸
+  scroll-timeline-name: --page-scroll;/* 給這個時間軸一個名字 */
+    scroll-timeline-axis: block; /* 監聽垂直滾動（Y軸） */
+}
+
+body {
+  font-family: "Noto Sans TC", serif;
+}
+
+.banner {
+  height: 992px;
+  background: url("https://github.com/0404kai/2025-layout-img/blob/main/week8/banner.jpg?raw=true")
+    no-repeat center center/cover;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 50px;
+  z-index: 1000;
+
+  animation: navbar-background-change forwards;
+  animation-timeline: --page-scroll; /* 將動畫綁定到 --page-scroll 滾動時間軸 */
+  animation-range: 0px 80px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+}
+
+@keyframes navbar-background-change {
+  from {
+    /* 0% 狀態 */
+    background-color: transparent;
+  }
+  to {
+    /* 100% 狀態 */
+    background-color: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(4px);
+  }
+}
+
+.navbar-brand {
+  font-size: 28px;
+  color: #4a3830;
+}
+.navbar-search input {
+  width: 400px;
+}
+.cart {
+  color: #4a3830;
+}
+.btn-login {
+  color: #fff;
+  background-color: #4a3830;
 }

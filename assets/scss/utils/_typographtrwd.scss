@@ -1,0 +1,83 @@
+@use "sass:map";
+@use "sass:string";
+
+// 自訂前綴（在本檔內定義，避免未定義）
+$tw-prefix: 'tw' !default;
+
+// 基準字級（若未使用 Bootstrap，保留此 fallback）
+$font-size-base: 1rem !default;
+
+// 字級表
+$tw-font-sizes: (
+  "dp":   (default: $font-size-base * 3,     lg: $font-size-base * 5),
+
+  "t-5xl": (default: $font-size-base * 2,     lg: $font-size-base * 3),
+  "t-4xl": (default: $font-size-base * 1.75,  lg: $font-size-base * 2),
+  "t-3xl": (default: $font-size-base * 1.5,   lg: $font-size-base * 1.75),
+  "t-2xl": (default: $font-size-base * 1.25,  lg: $font-size-base * 1.5),
+  "t-xl":  (default: $font-size-base * 1.125, lg: $font-size-base * 1.25),
+  "t-md":  (default: $font-size-base * .875,     lg: $font-size-base * 1),
+
+  "bd-lg": (default: $font-size-base * 1,     lg: $font-size-base * 1.125),
+  "bd-md": (default: $font-size-base * .875,  lg: $font-size-base * 1),
+  "bd-sm": (default: $font-size-base * .875,  lg: $font-size-base * .875),
+  "bd-xs": (default: $font-size-base * .75,   lg: $font-size-base * .75)
+) !default;
+
+// 產生 utilities；$prefix 為參數，避免全域變數依賴
+@mixin tw-type-utilities($sizes, $prefix: $tw-prefix, $lg-min: 960px) {
+  @each $key, $vals in $sizes {
+    // 預設：bd-* 正文
+    $fw: 400;
+    $lh: 1.5;
+
+    // 標題/展示：t-* 與 dp
+    @if $key == "dp" or string.index($key, "t-") == 1 {
+      $fw: 700;
+      $lh: 1.2;
+    }
+
+    .#{$prefix}-#{$key} {
+      font-size: map.get($vals, default);
+      font-weight: $fw;
+      line-height: $lh;
+    }
+  }
+
+  @media (min-width: $lg-min) {
+    @each $key, $vals in $sizes {
+      $lg: map.get($vals, lg);
+      @if $lg != null {
+        .#{$prefix}-#{$key} { font-size: $lg; }
+      }
+    }
+  }
+}
+
+// 生成
+@include tw-type-utilities($tw-font-sizes);
+
+
+.en-fm-sm, .en-fm-lg, .en-fm-xl {
+  font-weight: 700;
+  line-height: 1.2;
+}
+.en-fm-sm{
+  font-size: 14px;
+}
+.en-fm-lg{
+  font-size: 1rem;
+}
+.en-fm-xl{
+  font-size: 18px;
+}
+
+
+@media (min-width: 960px) {
+  .en-fm-lg{
+    font-size: 1.125rem; // 18px
+  }
+  .en-fm-xl{
+    font-size: 1.25rem; // 20px
+  }
+}
