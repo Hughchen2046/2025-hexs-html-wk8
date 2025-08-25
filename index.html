@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/2025-hexs-html-wk8/assets/main-B5XEN1AN.js"></script>
-    <link rel="stylesheet" crossorigin href="/2025-hexs-html-wk8/assets/main-BbT5FGNL.css">
-  </head>
-  <body>
-    <nav class="navbar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <script type="module" crossorigin src="/2025-hexs-html-wk8/assets/main-DmZ9frKH.js"></script>
+  <link rel="stylesheet" crossorigin href="/2025-hexs-html-wk8/assets/main-C6LGeKN9.css">
+</head>
+
+<body>
+  <nav class="navbar">
   <div class="container">
     <div class="navbar-search d-flex align-items-center">
-      <h1><a href="#" class="navbar-brand fw-bold"># ZOBAA<span class="fst-italic">!</span></a></h1>
-      <input class="border-0 rounded-3 p-2 d-none d-lg-block" type="search" placeholder="搜尋景點、地點或城市">
-    </div>
-    <div class="d-flex align-items-center">
-        <a href="#">
-        <span class="material-symbols-outlined cart me-3">
+      <a href="#" class="Poppins navbar-brand fw-bold"># ZOBAA<span class="ms-2 rotation-15">!</span></a>
+      <div class="input-group searchbar-nav shadow-sm align-items-center p-2 d-none d-lg-flex">
+        <span class="material-symbols-outlined">
           search
         </span>
-        </a>
-      <a href="#">
-        <span class="material-symbols-outlined cart me-3">
-          shopping_cart
+        <input type="search" class="form-control border-0 bg-transparent body-fs-1 p-0 ms-2 Poppins"
+          placeholder="搜尋景點、地點或城市" aria-label="Scence" aria-describedby="basic-addon1">
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <a href="#" class="p-2 line-height-1 d-lg-none">
+        <span class="material-symbols-outlined">
+          search
         </span>
       </a>
-      <button class="btn btn-login me-3">登入 / 註冊</button>
+      <a href="#" class="p-2 line-height-1">
+        <span class="material-symbols-outlined position-relative">
+          shopping_cart<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger tiny-fs Poppins">2</span>
+        </span>
+        
+      </a>
+      <a href="#" class="p-2 line-height-1 d-lg-none">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </a>
+      <button class="btn btn-df-nc-primary fw-bold title-fs ms-4 d-none d-lg-block">登入 / 註冊</button>
     </div>
   </div>
-</nav>
-
+</nav><!-- 收藏世界 -->
     <section class="background-img-1">
       <div class="container pt-11 tess banner-lg-position">
         <h4 class="title-fs h6-lg text-primary bg-primary-10 p-2 rounded-2 d-inline-block mb-3">ZOBAA 旅行推薦平台</h4>
@@ -44,8 +57,8 @@
           <span class="material-symbols-outlined">
             search
           </span>
-          <input type="text" class="form-control border-0 bg-transparent body-fs-1 p-0 ms-2 Poppins" placeholder="搜尋景點、地點或城市"
-            aria-label="Scence" aria-describedby="basic-addon1">
+          <input type="search" class="form-control border-0 bg-transparent body-fs-1 p-0 ms-2 Poppins"
+            placeholder="搜尋景點、地點或城市" aria-label="Scence" aria-describedby="basic-addon1">
           <button type="button" class="btn btn-sm-nc-primary title-fs fw-bold Poppins">
             開始探索旅程
           </button>
@@ -53,7 +66,8 @@
       </div>
       <div class="banner-gradient-overlay"></div>
     </section>
-    <section class="background-color-1 text-white">
+<!-- 專屬推薦 -->
+    <section class="background-color-1 text-white overflow-hidden">
       <div class="container py-10">
         <div class="d-lg-flex justify-content-lg-between align-items-lg-center mb-lg-13">
           <div class="mb-6 mb-lg-0">
@@ -70,11 +84,135 @@
               </span>
             </div>
           </div>
-    
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide four-slides">
+              <div class="card-product background-recommend d-flex flex-column justify-content-end">
+                <h2 class="h4 h2-lg mb-2">峇里島渡假漫遊</h2>
+                <p class="body-fs-2 body-lg-fs-1">精選五星級海灘度假村，專屬私人管家服務，讓您徹底放鬆身心。</p>
+                <button type="button" class="btn-md-ic-noborder title-fs fw-bold">訂購行程
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide four-slides">
+              <div class="card-product background-recommend-1 d-flex flex-column justify-content-end">
+                <h2 class="h4 h2-lg mb-2">日本深度賞櫻計畫</h2>
+                <p class="body-fs-2 body-lg-fs-1">春季限定，東京、京都、大阪賞櫻之旅，體驗日本文化的精髓。</p>
+                <button type="button" class="btn-md-ic-noborder title-fs fw-bold">訂購行程
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide four-slides">
+              <div class="card-product background-recommend-2 d-flex flex-column justify-content-end">
+                <h2 class="h4 h2-lg mb-2">紐西蘭雪山探險</h2>
+                <p class="body-fs-2 body-lg-fs-1">探索南島壯麗的自然風光，體驗各種極限運動和戶外活動。</p>
+                <button type="button" class="btn-md-ic-noborder title-fs fw-bold">訂購行程
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide four-slides">
+              <div class="card-product background-recommend-3 d-flex flex-column justify-content-end">
+                <h2 class="h4 h2-lg mb-2">摩洛哥迷幻之旅</h2>
+                <p class="body-fs-2 body-lg-fs-1">漫步沙漠與古城之間，探索千年文化與色彩繽紛的市集風情。</p>
+                <button type="button" class="btn-md-ic-noborder title-fs fw-bold">訂購行程
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommend-pagination mt-10"></div>
+      </div>
+    </section>
+<!-- 踏上旅程的 -->
+    <section class="position-relative overflow-hidden">
+      <div class="deco-bg d-none d-lg-block" aria-hidden="true"></div>
+      <img src="/2025-hexs-html-wk8/assets/deco-text-dR8oy4or.svg" alt="" class="deco-text d-none d-lg-block start-50" aria-hidden="true">     
+      <div class="container pt-10 pb-11 py-lg-14">
+        <div class="d-lg-flex flex-lg-row-reverse justify-content-lg-between align-items-lg-center">
+          <div class="mb-10 mb-lg-0 z-1 col-lg-4">
+            <h3 class="text-primary display-lg-2">ZOBAA!</h3>
+            <h3 class="text-primary display-lg-2">踏上旅程的</h3>
+            <h3 class="text-primary display-lg-2 mb-6">第一站</h3>
+            <p class="subtitle-fs h6-lg text-primary-60 fw-bold">探索最熱門的旅遊主題，</p>
+            <p class="subtitle-fs h6-lg text-primary-60 fw-bold">從旅人必備攻略到獨家優惠，</p>
+            <p class="subtitle-fs h6-lg text-primary-60 fw-bold">全都為你精挑細選。</p>
+          </div>
+
+          <div class="d-flex flex-column gap-4 gap-lg-6 flex-lg-row flex-lg-wrap">
+            <div class="card rounded-4 overflow-hidden col-lg-4">
+              <img src="/2025-hexs-html-wk8/assets/intro-1-BjE3o7NZ.png" alt="">
+              <div class="card-body p-6">
+                <h6 class="h6 mb-2">ZOBAA 專屬推薦行程</h6>
+                <p class="body-fs-1 text-gray-dark">嚴選深度行程，豐富旅行靈感</p>
+              </div>
+            </div>
+            <div class="card rounded-4 overflow-hidden col-lg-4">
+              <img src="/2025-hexs-html-wk8/assets/intro-2-Cuy_oOTQ.png" alt="">
+              <div class="card-body p-6">
+                <h6 class="h6 mb-2">旅人攻略集合</h6>
+                <p class="body-fs-1 text-gray-dark">景點、交通、私房景點一次掌握</p>
+              </div>
+            </div>
+            <div class="card rounded-4 overflow-hidden col-lg-4 ms-lg-13">
+              <img src="/2025-hexs-html-wk8/assets/intro-3-BOaJZxZ5.png" alt="">
+              <div class="card-body p-6">
+                <h6 class="h6 mb-2">優惠機票、酒店</h6>
+                <p class="body-fs-1 text-gray-dark">即時比價，聰明出發不踩雷</p>
+              </div>
+            </div>
+            <div class="card rounded-4 overflow-hidden col-lg-4">
+              <img src="/2025-hexs-html-wk8/assets/intro-4-BtzNLPn_.png" alt="">
+              <div class="card-body p-6">
+                <h6 class="h6 mb-2">銀行專屬優惠</h6>
+                <p class="body-fs-1 text-gray-dark">使用指定卡別享受獨家旅遊好康</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
+<!-- 靈感地圖 -->
+    <section class="test">
+      <!-- <div class="background-color-2"></div> -->
+      <div class="py-10 py-lg-13">
+        <div class="container py-10">
+          <div class="d-lg-flex justify-content-lg-between align-items-lg-center">
+            <div class="position-relative mb-6 mb-lg-0">
+              <img src="/2025-hexs-html-wk8/assets/deco-text-1-tlJylTdZ.svg" alt="" class="position-absolute deco-text-1">
+              <h3 class="display-lg-2">今年旅行的</h3>
+              <h3 class="display-lg-2 mb-6">靈感地圖</h3>
+              <div class="swiper btn-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide btn-slides"><button type="button"
+                      class="btn-tiny-nc-nout active title-fs">全部</button></div>
+                  <div class="swiper-slide btn-slides"><button type="button" class="btn-tiny-nc-nout title-fs">亞洲</button>
+                  </div>
+                  <div class="swiper-slide btn-slides"><button type="button" class="btn-tiny-nc-nout title-fs">歐洲</button>
+                  </div>
+                  <div class="swiper-slide btn-slides"><button type="button" class="btn-tiny-nc-nout title-fs">美洲</button>
+                  </div>
+                  <div class="swiper-slide btn-slides"><button type="button" class="btn-tiny-nc-nout title-fs">大洋洲</button>
+                  </div>
+                  <div class="swiper-slide btn-slides"><button type="button" class="btn-tiny-nc-nout title-fs">非洲</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-lg-end">
+              <p class="subtitle-fs h6-lg text-primary-100">來自旅人搜尋、收藏與討論最多的目的地排行榜，</p>
+              <p class="subtitle-fs h6-lg text-primary-100">一場風格與故事感兼具的靈感旅行，就從這裡開始。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">footer</footer>
-  </body>
+</body>
+
 </html>
