@@ -745,8 +745,8 @@ $line-height-lg: 2 !default;
 }
 
 .tiny-fs {
-  font-size: $font-size-base * .75;
-  font-style: normal;
+  font-size: $font-size-base * .75 !important;
+  font-style: normal !important;
   font-weight: $font-weight-normal;
   line-height: $line-height-base;
 }

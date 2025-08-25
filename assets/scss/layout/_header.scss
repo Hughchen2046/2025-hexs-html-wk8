@@ -4,20 +4,10 @@ html {
     scroll-timeline-axis: block; /* 監聽垂直滾動（Y軸） */
 }
 
-body {
-  font-family: "Noto Sans TC", serif;
-}
-
-.banner {
-  height: 992px;
-  background: url("https://github.com/0404kai/2025-layout-img/blob/main/week8/banner.jpg?raw=true")
-    no-repeat center center/cover;
-}
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 50px;
   z-index: 1000;
 
   animation: navbar-background-change forwards;
@@ -32,11 +22,16 @@ body {
   }
   to {
     /* 100% 狀態 */
+    border-bottom: 0.5px solid var(--Neutral-40, #ECECEC);
     background-color: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(4px);
+    // backdrop-filter: blur(4px);
   }
 }
 
+.rotation-15{
+  display: inline-block;
+  transform: rotate(15deg);
+}
 .navbar-brand {
   font-size: 28px;
   color: #4a3830;
@@ -44,10 +39,23 @@ body {
 .navbar-search input {
   width: 400px;
 }
-.cart {
-  color: #4a3830;
+.line-height-1{
+  line-height: 1 !important;
 }
 .btn-login {
   color: #fff;
   background-color: #4a3830;
+}
+.searchbar-nav{
+  max-width: 400px;
+  max-height: 44px;
+  border-radius: 8px;
+  background-color: white;
+  border:1px solid #ECECEC;
+  color: #909090;
+}
+
+.searchbar-nav .form-control:focus{
+  box-shadow: none;
+  outline:0;
 }
