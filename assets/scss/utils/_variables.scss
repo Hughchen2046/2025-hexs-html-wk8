@@ -23,10 +23,15 @@ $gray-500: #909090 !default;
 $gray-600: #909090 !default;
 $gray-700: #4B4B4B !default;
 $gray-800: #4B4B4B !default;
-
 $gray-900: #212529 !default;
 $black: #000 !default;
 // scss-docs-end gray-color-variables
+.text-gray-dark{
+  color: $gray-800;
+}
+.text-gray-uni{
+  color: #808080;
+}
 
 // fusv-disable
 // scss-docs-start gray-colors-map
@@ -375,7 +380,9 @@ $theme-colors: map-merge(
     "primary-80":  $brown-80,
     "primary-60":  $brown-60,
     "primary-40":  $brown-40,
-    "primary-10":  $brown-10
+    "primary-10":  $brown-10,
+    "secondary-80": $gray-800,
+    "secondary-40": $gray-400
   )
 );
 
@@ -483,6 +490,7 @@ $theme-colors: map-merge(
     11: $spacer * 3, //48
     12: $spacer * 4, //64
     13: $spacer * 5, //80
+    14:$spacer * 7.5 //120
     ) !default;
   // scss-docs-end spacer-variables-maps
 
@@ -699,7 +707,7 @@ $font-family-code: var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm: $font-size-base * .875 !default;
+$font-size-sm: $font-size-base * .875 !default; 
 $font-size-lg: $font-size-base * 1.25 !default;
 
 $font-weight-lighter: lighter !default;
@@ -781,7 +789,7 @@ $headings-font-family: null !default;
 // $headings-font-style:         null !default;
 $headings-font-style: bold !default;
 // $headings-font-weight:        500 !default;
-$headings-font-weight: 600 !default;
+$headings-font-weight: 700 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
 // scss-docs-end headings-variables

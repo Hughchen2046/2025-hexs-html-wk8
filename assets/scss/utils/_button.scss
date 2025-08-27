@@ -8,6 +8,20 @@
     border-radius: 12px !important;   
 }
 
+.btn-md-ic-noborder, .btn-md-ic-noborder-bk{
+    padding: 16px 20px;
+    border-radius: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+}
+.btn-md-ic-noborder-bk{
+    background-color: $black;
+    color: $white;
+}
+
 .btn-df-nc-secondary .btn-sm-nc-secondary{
     border: 1px solid $primary;
 }
@@ -19,4 +33,29 @@
         background-color: $brown-120;
         color: $white;
     }
+}
+
+.btn-tiny-nc-nout{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 0;
+    background-color: $white;
+    color: $primary;
+    &:hover{
+        background-color:  $primary;
+        color: $white;
+    }
+    &.active{
+        background-color:  $primary;
+        color: $white;        
+    }
+}
+
+.heart-btn{
+    padding: 16px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px)
+
 }
